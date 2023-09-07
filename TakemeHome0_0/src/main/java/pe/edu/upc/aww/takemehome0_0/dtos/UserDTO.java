@@ -1,4 +1,5 @@
 package pe.edu.upc.aww.takemehome0_0.dtos;
 
-public class UserDTO {
+public class UserDTO {}
+    private int idUser;
 }
