@@ -10,5 +10,5 @@ public interface IOrderService {
     public List<Order> list();
     public void delete(int idOrder);
     public Order listId(int idOrder);
-
+    List<Order> findByDestinationAddress(String destinationAddress);
 }

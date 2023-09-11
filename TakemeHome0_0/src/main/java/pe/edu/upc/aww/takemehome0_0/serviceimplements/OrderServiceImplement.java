@@ -32,4 +32,10 @@ public class OrderServiceImplement implements IOrderService {
     public Order listId(int idOrder) {
         return oR.findById(idOrder).orElse(new Order());
     }
+
+    @Override
+    public List<Order> findByDestinationAddress(String destinationAddress) {
+        return oR.findByDestinationAddress(destinationAddress);
+    }
+
 }
