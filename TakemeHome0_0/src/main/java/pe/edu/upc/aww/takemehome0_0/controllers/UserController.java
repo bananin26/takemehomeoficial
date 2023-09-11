@@ -41,7 +41,7 @@ public class UserController {
         return dto;
     }
     @PostMapping("/search :)")
-    public List<UserDTO> search(@RequestBody LocalDate date){
+    public List<UserDTO> search(@RequestParam("date") LocalDate date){
         return uS.findByBirthday(date).stream().map(x->{
             ModelMapper m= new ModelMapper();
             return m.map(x,UserDTO.class);
