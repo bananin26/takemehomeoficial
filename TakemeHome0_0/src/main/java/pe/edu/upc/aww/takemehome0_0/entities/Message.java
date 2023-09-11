@@ -32,7 +32,6 @@ public class Message {
     }
 
     public Message() {
-
     }
 
     public int getIdMessage() {
