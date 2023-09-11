@@ -11,8 +11,6 @@ public class User {
     private int idUser;
     @Column(name="name",length = 45,nullable = false)
     private String name;
-    @Column(name="username",nullable = false)
-    private String username;
     @Column(name = "email",nullable = false)
     private String email;
     @Column(name = "phone",nullable = false)
@@ -21,22 +19,17 @@ public class User {
     private LocalDate birthday;
     @Column(name = "country",nullable = false)
     private String country;
-    @Column(name = "password",nullable = false)
-    private String password;
-
     public User() {
     }
 
-    public User(int idUser, String name, String username, String email,String phone, LocalDate birthday, String country, String password) {
+    public User(int idUser, String name, String email,String phone, LocalDate birthday, String country) {
 
         this.idUser= idUser;
         this.name = name;
-        this.username = username;
         this.email = email;
         this.phone=phone;
         this.birthday = birthday;
         this.country = country;
-        this.password = password;
     }
 
     public int getIdUser() {
@@ -53,14 +46,6 @@ public class User {
 
     public void setName(String name) {
         this.name = name;
-    }
-
-    public String getUsername() {
-        return username;
-    }
-
-    public void setUsername(String username) {
-        this.username = username;
     }
 
     public String getEmail() {
@@ -95,11 +80,4 @@ public class User {
         this.country = country;
     }
 
-    public String getPassword() {
-        return password;
-    }
-
-    public void setPassword(String password) {
-        this.password = password;
-    }
 }
