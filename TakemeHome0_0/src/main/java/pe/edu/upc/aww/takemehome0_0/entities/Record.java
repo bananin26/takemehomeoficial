@@ -10,7 +10,7 @@ public class Record {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int idRecord;
     @Column(name = "payment", nullable = false)
-    private Number payment;
+    private String payment;
     @Column(name = "payment_date",nullable = false)
     private LocalDate paymentDate;
     @Column(name = "arrive_date",nullable = false)
@@ -39,11 +39,11 @@ public class Record {
         this.idRecord = idRecord;
     }
 
-    public Number getPayment() {
+    public String getPayment() {
         return payment;
     }
 
-    public void setPayment(Number payment) {
+    public void setPayment(String payment) {
         this.payment = payment;
     }
 
