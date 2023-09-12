@@ -11,16 +11,13 @@ public class NotificationServiceImplement implements INotificationService {
     @Autowired
     private INotificationRepository nR;
     @Override
-    public void Insert(Notification notification) {
+    public void insert(Notification notification) {
         nR.save(notification);
-
     }
-
     @Override
     public void delete(int idNotification) {
                nR.deleteById(idNotification);
     }
-
     @Override
     public Notification listId(int idNotification) {
         return nR.findById(idNotification).orElse(new Notification());
