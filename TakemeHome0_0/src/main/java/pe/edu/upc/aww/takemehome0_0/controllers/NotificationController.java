@@ -15,20 +15,20 @@ public class NotificationController {
     private INotificationService nS;
 
     @PostMapping
-    public void registrar(@RequestBody NotificationDTO dto) {
+    public void register(@RequestBody NotificationDTO dto) {
 
         ModelMapper m = new ModelMapper();
         Notification n = m.map(dto, Notification.class);
-        nS.Insert(n);
+        nS.insert(n);
     }
 
     @DeleteMapping("/{id}")
-    public void eliminar(@PathVariable("id") Integer id) {
+    public void delete(@PathVariable("id") Integer id) {
         nS.delete(id);
     }
 
     @GetMapping("/{id}")
-    public NotificationDTO listarId(@PathVariable("id") Integer id) {
+    public NotificationDTO listId(@PathVariable("id") Integer id) {
         ModelMapper m = new ModelMapper();
         NotificationDTO dto = m.map(nS.listId(id), NotificationDTO.class);
         return dto;
