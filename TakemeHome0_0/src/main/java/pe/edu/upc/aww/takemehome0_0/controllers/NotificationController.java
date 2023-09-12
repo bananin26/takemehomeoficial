@@ -7,6 +7,9 @@ import pe.edu.upc.aww.takemehome0_0.dtos.NotificationDTO;
 import pe.edu.upc.aww.takemehome0_0.entities.Notification;
 import pe.edu.upc.aww.takemehome0_0.serviceinterfaces.INotificationService;
 
+import java.util.List;
+import java.util.stream.Collectors;
+
 @RestController
 @RequestMapping("/notifications")
 public class NotificationController {
@@ -20,6 +23,13 @@ public class NotificationController {
         ModelMapper m = new ModelMapper();
         Notification n = m.map(dto, Notification.class);
         nS.insert(n);
+    }
+    @GetMapping
+    public List<NotificationDTO> listar() {
+        return nS.list().stream().map(x -> {
+            ModelMapper m = new ModelMapper();
+            return m.map(x, NotificationDTO.class);
+        }).collect(Collectors.toList());
     }
 
     @DeleteMapping("/{id}")

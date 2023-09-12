@@ -12,7 +12,7 @@ import java.time.LocalDate;
 
 public class RecordDTO {
     private int idRecord;
-    private Number payment;
+    private String payment;
     private LocalDate paymentDate;
     private LocalDate arriveDate;
     private User user;
@@ -28,11 +28,11 @@ public class RecordDTO {
         this.idRecord = idRecord;
     }
 
-    public Number getPayment() {
+    public String getPayment() {
         return payment;
     }
 
-    public void setPayment(Number payment) {
+    public void setPayment(String payment) {
         this.payment = payment;
     }
 

@@ -4,6 +4,7 @@ import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 import pe.edu.upc.aww.takemehome0_0.dtos.RecordDTO;
+import pe.edu.upc.aww.takemehome0_0.entities.Record;
 import pe.edu.upc.aww.takemehome0_0.serviceinterfaces.IRecordService;
 
 import java.util.List;

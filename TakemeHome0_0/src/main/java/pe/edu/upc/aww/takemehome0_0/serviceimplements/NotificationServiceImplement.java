@@ -6,6 +6,8 @@ import pe.edu.upc.aww.takemehome0_0.entities.Notification;
 import pe.edu.upc.aww.takemehome0_0.repositories.INotificationRepository;
 import pe.edu.upc.aww.takemehome0_0.serviceinterfaces.INotificationService;
 
+import java.util.List;
+
 @Service
 public class NotificationServiceImplement implements INotificationService {
     @Autowired
@@ -14,6 +16,12 @@ public class NotificationServiceImplement implements INotificationService {
     public void insert(Notification notification) {
         nR.save(notification);
     }
+
+    @Override
+    public List<Notification> list() {
+        return nR.findAll();
+    }
+
     @Override
     public void delete(int idNotification) {
                nR.deleteById(idNotification);
