@@ -1,35 +1,24 @@
-package pe.edu.upc.aww.takemehome0_0.entities;
+package pe.edu.upc.aww.takemehome0_0.dtos;
 
-import javax.persistence.*;
+import pe.edu.upc.aww.takemehome0_0.entities.Category;
+import pe.edu.upc.aww.takemehome0_0.entities.Order;
+import pe.edu.upc.aww.takemehome0_0.entities.Product;
+import pe.edu.upc.aww.takemehome0_0.entities.User;
+
+import javax.persistence.Column;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 import java.time.LocalDate;
 
-@Entity
-@Table(name="records")
-public class Record {
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+public class RecordDTO {
     private int idRecord;
-    @Column(name = "payment", nullable = false)
     private Number payment;
-    @Column(name = "payment_date",nullable = false)
     private LocalDate paymentDate;
-    @Column(name = "arrive_date",nullable = false)
     private LocalDate arriveDate;
-    @ManyToOne
-    @JoinColumn(name = "user_id")
     private User user;
-    @ManyToOne
-    @JoinColumn(name = "order_id")
     private Order order;
-    @ManyToOne
-    @JoinColumn(name = "product_id")
     private Product product;
-    @ManyToOne
-    @JoinColumn(name = "category_id")
     private Category category;
-
-    public Record(){
-    }
 
     public int getIdRecord() {
         return idRecord;
