@@ -19,5 +19,9 @@ public class CategoryServiceImplement implements ICategoryService {
     public  Category listId(int idCategory){return cR.findById(idCategory).orElse(new Category());}
 
     @Override
+    public void delete(int idCategory) {
+
+    }
+    @Override
     public  List<Category> findByNameCategory(String nameCategory){return cR.findByNameCategory(nameCategory);}
 }
