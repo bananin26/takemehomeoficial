@@ -9,4 +9,6 @@ public interface ICategoryService {
     public List<Category> list();
     public Category listId(int idCategory);
 
+    List<Category>findByNameCategory(String nameCategory);
+
 }
