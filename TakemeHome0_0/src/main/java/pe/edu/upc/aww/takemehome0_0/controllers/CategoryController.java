@@ -18,9 +18,9 @@ public class CategoryController {
     private ICategoryService cS;
 
     @PostMapping
-    public void register(@RequestBody CategoryDTO dto){
+    public void register(@RequestBody Category dto) {
         ModelMapper m = new ModelMapper();
-        Category u= m.map(dto,Category.class);
+        Category u = m.map(dto, Category.class);
         cS.insert(u);
     }
     @GetMapping
@@ -29,16 +29,6 @@ public class CategoryController {
             ModelMapper m= new ModelMapper();
             return m.map(x,CategoryDTO.class);
         }).collect(Collectors.toList());
-    }
-    @DeleteMapping("/{id}")
-    public void delete(@PathVariable("id") Integer id){
-        cS.delete(id);
-    }
-    @GetMapping("/{id}")
-    public CategoryDTO to_listId(@PathVariable ("id") Integer id) {
-        ModelMapper m = new ModelMapper();
-        CategoryDTO dto = m.map(cS.listId(id),CategoryDTO.class);
-        return dto;
     }
     @PostMapping("/search :)")
     public List<CategoryDTO> search(@RequestBody String nameCategory){
