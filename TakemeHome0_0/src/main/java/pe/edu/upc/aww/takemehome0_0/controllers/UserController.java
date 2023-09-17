@@ -65,7 +65,7 @@ public class UserController {
         return uS.counterUsers();
     }
 
-    @GetMapping("/cantidadmensajesenviadosporpersona")
+    @GetMapping("/QuantityMessageSendByUser")
     public List<MessageByUserDTO> cantidadMensajesEnviadosPorPersona() {
         List<String[]> lista=uS.quantityMessageSendByPerson();
         List<MessageByUserDTO> listaDTO= new ArrayList<>();
@@ -78,7 +78,7 @@ public class UserController {
         return listaDTO;
     }
 
-    @GetMapping("/cantidadmensajesrecibidosporpersona")
+    @GetMapping("/QuantityMessageReceiveByUser")
     public List<MessageByUserDTO> cantidadMensajesRecibidosPorPersona() {
         List<String[]> lista=uS.quantityMessageReceiveByPerson();
         List<MessageByUserDTO> listaDTO= new ArrayList<>();

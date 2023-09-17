@@ -58,7 +58,7 @@ public class OrderController {
         }).collect(Collectors.toList());
     }
 
-    @GetMapping("/sumatoriacomprasporusuario")
+    @GetMapping("/SumatoryPurchasesByUser")
     public List<TotalPurchasesByUserDTO> SumatoriaComprasPorUsuario() {
         List<String[]> lista=oR.totalPurchasesByPerson();
         List<TotalPurchasesByUserDTO> listaDTO= new ArrayList<>();
