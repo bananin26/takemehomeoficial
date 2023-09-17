@@ -80,7 +80,7 @@ public class UserController {
 
     @GetMapping("/cantidadmensajesrecibidosporpersona")
     public List<MessageByPersonDTO> cantidadMensajesRecibidosPorPersona() {
-        List<String[]> lista=uS.quantityMessageSendByPerson();
+        List<String[]> lista=uS.quantityMessageReceiveByPerson();
         List<MessageByPersonDTO> listaDTO= new ArrayList<>();
         for(String[] data:lista){
             MessageByPersonDTO dto= new MessageByPersonDTO();
