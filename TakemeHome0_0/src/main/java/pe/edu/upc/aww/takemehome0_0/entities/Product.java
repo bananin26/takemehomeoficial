@@ -22,7 +22,7 @@ public class Product {
     @Column(name = "dimensionsProduct",nullable = false)
     private String dimensionsProduct;
     @ManyToOne
-    @JoinColumn(name = "idUser")
+    @JoinColumn(name = "id_user")
     private User user;
 
     public Product(){}

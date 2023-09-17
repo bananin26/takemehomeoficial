@@ -12,4 +12,5 @@ public interface IUserService {
     public void delete(int idUser);
     public User listId(int idUser);
     List<User>findByBirthday(LocalDate birthday);
+    Long counterUsers();
 }

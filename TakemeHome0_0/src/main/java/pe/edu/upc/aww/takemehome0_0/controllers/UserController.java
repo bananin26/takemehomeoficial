@@ -23,6 +23,7 @@ public class UserController {
         User u= m.map(dto, User.class);
         uS.insert(u);
     }
+
     @GetMapping
     public List<UserDTO> to_list(){
         return uS.list().stream().map(x->{
@@ -30,6 +31,7 @@ public class UserController {
             return m.map(x,UserDTO.class);
         }).collect(Collectors.toList());
     }
+
     @DeleteMapping("/{id}")
     public void delete(@PathVariable("id") Integer id){
         uS.delete(id);
@@ -40,6 +42,7 @@ public class UserController {
         UserDTO dto = m.map(uS.listId(id),UserDTO.class);
         return dto;
     }
+
     @PostMapping("/search :)")
     public List<UserDTO> search(@RequestParam("date") LocalDate date){
         return uS.findByBirthday(date).stream().map(x->{
@@ -47,11 +50,18 @@ public class UserController {
             return m.map(x,UserDTO.class);
         }).collect(Collectors.toList());
     }
+
     @PutMapping
     public void change(@RequestBody UserDTO dto){
         ModelMapper m = new ModelMapper();
         User p = m.map(dto,User.class);
         uS.insert(p);
     }
+
+    @GetMapping("/counter")
+    public Long counter() {
+        return uS.counterUsers();
+    }
+
 
 }
