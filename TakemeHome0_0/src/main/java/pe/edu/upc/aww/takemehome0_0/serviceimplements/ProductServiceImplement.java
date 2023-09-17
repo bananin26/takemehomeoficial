@@ -3,7 +3,7 @@ package pe.edu.upc.aww.takemehome0_0.serviceimplements;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import pe.edu.upc.aww.takemehome0_0.entities.Product;
-import pe.edu.upc.aww.takemehome0_0.repositories.IProductRespository;
+import pe.edu.upc.aww.takemehome0_0.repositories.IProductRepository;
 import pe.edu.upc.aww.takemehome0_0.serviceinterfaces.IProductService;
 
 import java.util.List;
@@ -11,10 +11,10 @@ import java.util.List;
 @Service
 public class ProductServiceImplement implements IProductService {
     @Autowired
-    private IProductRespository pR;
+    private IProductRepository pR;
     @Override
-    public void insert(Product product) { pR.save(product);
-
+    public void insert(Product product) {
+        pR.save(product);
     }
 
     @Override
@@ -25,7 +25,6 @@ public class ProductServiceImplement implements IProductService {
     @Override
     public void delete(int idProduct) {
         pR.deleteById(idProduct);
-
     }
 
     @Override
@@ -37,4 +36,11 @@ public class ProductServiceImplement implements IProductService {
     public List<Product> findByNameProduct(String nameProduct) {
         return pR.findByNameProduct( nameProduct);
     }
+
+    @Override
+    public List<String[]> counterProductsForUsers() {
+        return pR.countProductsWithUsers();
+    }
+
+
 }

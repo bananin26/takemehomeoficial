@@ -4,9 +4,11 @@ import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 import pe.edu.upc.aww.takemehome0_0.dtos.ProductDTO;
+import pe.edu.upc.aww.takemehome0_0.dtos.TotalProductForUserDTO;
 import pe.edu.upc.aww.takemehome0_0.entities.Product;
 import pe.edu.upc.aww.takemehome0_0.serviceinterfaces.IProductService;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -49,6 +51,19 @@ import java.util.stream.Collectors;
                 ModelMapper m= new ModelMapper();
                 return m.map(x,ProductDTO.class);
             }).collect(Collectors.toList());
+        }
+
+        @GetMapping("/ProductForUser")
+        public List<TotalProductForUserDTO> totalProductForUser(){
+            List<String[]>list=pS.counterProductsForUsers();
+            List<TotalProductForUserDTO> listDTO=new ArrayList<>();
+            for (String[] data:list){
+                TotalProductForUserDTO dto = new TotalProductForUserDTO();
+                dto.setName(data[0]);
+                dto.setTotalProducts(Integer.parseInt(data[1]));
+                listDTO.add(dto);
+            }
+            return listDTO;
         }
 
     }

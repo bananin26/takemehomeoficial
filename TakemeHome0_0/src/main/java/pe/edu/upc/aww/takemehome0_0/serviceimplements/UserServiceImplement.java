@@ -38,4 +38,9 @@ public class UserServiceImplement implements IUserService {
     public List<User> findByBirthday(LocalDate birthday) {
         return uR.findByBirthday(birthday);
     }
+
+    @Override
+    public Long counterUsers() {
+        return uR.countUsers();
+    }
 }

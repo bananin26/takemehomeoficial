@@ -10,4 +10,5 @@ public interface IProductService {
     public void delete(int idProduct);
     public Product listId(int idOrder);
     List<Product>findByNameProduct(String nameProduct);
+    public List<String[]> counterProductsForUsers();
 }
