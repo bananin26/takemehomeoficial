@@ -20,6 +20,15 @@ public interface IUserRepository extends JpaRepository<User,Integer> {
             "  on u.id_user=m.user_send_id\n" +
             "\n" +
             "  group by u.name", nativeQuery = true)
-    public List<String[]> quantityMessageByPerson();
+    public List<String[]> quantityMessageSendByPerson();
+
+    @Query(value="select u.name, count(m.id_message)\n" +
+            "\n" +
+            "  from users u inner join message m \n" +
+            "\n" +
+            "  on u.id_user=m.user_receives_id\n" +
+            "\n" +
+            "  group by u.name", nativeQuery = true)
+    public List<String[]> quantityMessageReceiveByPerson();
 
 }

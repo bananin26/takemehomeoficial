@@ -20,4 +20,5 @@ public class MessageByPersonDTO {
     public void setQuantityMessage(int quantityMessage) {
         this.quantityMessage = quantityMessage;
     }
+
 }

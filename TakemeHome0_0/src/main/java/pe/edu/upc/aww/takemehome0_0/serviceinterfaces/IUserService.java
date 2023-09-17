@@ -14,5 +14,6 @@ public interface IUserService {
     List<User>findByBirthday(LocalDate birthday);
     Long counterUsers();
 
-    public List<String[]> quantityMessageByPerson();
+    public List<String[]> quantityMessageSendByPerson();
+    public List<String[]> quantityMessageReceiveByPerson();
 }

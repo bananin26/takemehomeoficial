@@ -65,9 +65,9 @@ public class UserController {
         return uS.counterUsers();
     }
 
-    @GetMapping("/cantidadmensajesporpersona")
-    public List<MessageByPersonDTO> cantidadMensajesPorPersona() {
-        List<String[]> lista=uS.quantityMessageByPerson();
+    @GetMapping("/cantidadmensajesenviadosporpersona")
+    public List<MessageByPersonDTO> cantidadMensajesEnviadosPorPersona() {
+        List<String[]> lista=uS.quantityMessageSendByPerson();
         List<MessageByPersonDTO> listaDTO= new ArrayList<>();
         for(String[] data:lista){
             MessageByPersonDTO dto= new MessageByPersonDTO();
@@ -78,5 +78,16 @@ public class UserController {
         return listaDTO;
     }
 
-
+    @GetMapping("/cantidadmensajesrecibidosporpersona")
+    public List<MessageByPersonDTO> cantidadMensajesRecibidosPorPersona() {
+        List<String[]> lista=uS.quantityMessageSendByPerson();
+        List<MessageByPersonDTO> listaDTO= new ArrayList<>();
+        for(String[] data:lista){
+            MessageByPersonDTO dto= new MessageByPersonDTO();
+            dto.setName(data[0]);
+            dto.setQuantityMessage(Integer.parseInt(data[1]));
+            listaDTO.add(dto);
+        }
+        return listaDTO;
+    }
 }

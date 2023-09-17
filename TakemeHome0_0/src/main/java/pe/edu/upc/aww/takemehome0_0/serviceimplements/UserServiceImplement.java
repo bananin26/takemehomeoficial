@@ -45,7 +45,12 @@ public class UserServiceImplement implements IUserService {
     }
 
     @Override
-    public List<String[]> quantityMessageByPerson(){
-        return uR.quantityMessageByPerson();
+    public List<String[]> quantityMessageSendByPerson(){
+        return uR.quantityMessageSendByPerson();
+    }
+
+    @Override
+    public List<String[]> quantityMessageReceiveByPerson(){
+        return uR.quantityMessageReceiveByPerson();
     }
 }
