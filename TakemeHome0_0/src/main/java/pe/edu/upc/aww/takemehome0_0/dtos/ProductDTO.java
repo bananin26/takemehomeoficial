@@ -9,7 +9,7 @@ public class ProductDTO {
 
     private String nameProduct;
     private String descriptionProduct;
-    private String priceProduct;
+    private Double priceProduct;
 
 
     private String dimensionsProduct;
@@ -40,11 +40,11 @@ public class ProductDTO {
         this.descriptionProduct = descriptionProduct;
     }
 
-    public String getPriceProduct() {
+    public Double getPriceProduct() {
         return priceProduct;
     }
 
-    public void setPriceProduct(String priceProduct) {
+    public void setPriceProduct(Double priceProduct) {
         this.priceProduct = priceProduct;
     }
 

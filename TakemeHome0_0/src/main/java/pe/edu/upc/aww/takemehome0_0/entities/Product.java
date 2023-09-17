@@ -10,14 +10,12 @@ public class Product {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int idProduct;
 
-    @Column(name = "nameProduct",length = 45,nullable = false)
+    @Column(name = "nameProduct",length = 250,nullable = false)
     private String nameProduct;
-    @Column(name = "descriptionProduct",length = 45,nullable = false)
+    @Column(name = "descriptionProduct",length = 250 ,nullable = false)
     private String descriptionProduct;
     @Column(name = "priceProduct",nullable = false)
-    private String priceProduct;
-
-
+    private Double priceProduct;
     @Column(name = "dimensionsProduct",nullable = false)
     private String dimensionsProduct;
     @ManyToOne
@@ -26,7 +24,7 @@ public class Product {
 
     public Product(){}
 
-   public Product(int idProduct,String nameProduct,String descriptionProduct,String priceProduct,String dimensionsProduct, User user){
+   public Product(int idProduct,String nameProduct,String descriptionProduct,Double priceProduct,String dimensionsProduct, User user){
         this.idProduct=idProduct;
         this.nameProduct=nameProduct;
         this.descriptionProduct=descriptionProduct;
@@ -60,11 +58,11 @@ public class Product {
         this.descriptionProduct = descriptionProduct;
     }
 
-    public String getPriceProduct() {
+    public Double getPriceProduct() {
         return priceProduct;
     }
 
-    public void setPriceProduct(String priceProduct) {
+    public void setPriceProduct(Double priceProduct) {
         this.priceProduct = priceProduct;
     }
 
