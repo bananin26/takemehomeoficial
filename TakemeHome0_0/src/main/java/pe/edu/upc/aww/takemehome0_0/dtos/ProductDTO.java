@@ -1,41 +1,20 @@
-package pe.edu.upc.aww.takemehome0_0.entities;
+package pe.edu.upc.aww.takemehome0_0.dtos;
 
-import javax.persistence.*;
-import java.time.LocalDate;
+import pe.edu.upc.aww.takemehome0_0.entities.User;
 
-@Entity
-@Table(name="products")
-public class Product {
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+
+
+public class ProductDTO {
     private int idProduct;
 
-    @Column(name = "nameProduct",length = 45,nullable = false)
     private String nameProduct;
-    @Column(name = "descriptionProduct",length = 45,nullable = false)
     private String descriptionProduct;
-    @Column(name = "priceProduct",nullable = false)
     private String priceProduct;
 
-    @Column(name = "urlProduct",nullable = false)
     private String urlProduct;
-    @Column(name = "dimensionsProduct",nullable = false)
     private String dimensionsProduct;
-    @ManyToOne
-    @JoinColumn(name = "idUser")
+
     private User user;
-
-    public Product(){}
-
-   public Product(int idProduct,String nameProduct,String descriptionProduct,String priceProduct,String urlProduct,String dimensionsProduct, User user){
-        this.idProduct=idProduct;
-        this.nameProduct=nameProduct;
-        this.descriptionProduct=descriptionProduct;
-        this.priceProduct=priceProduct;
-        this.urlProduct=urlProduct;
-        this.dimensionsProduct=dimensionsProduct;
-        this.user=user;
-   }
 
     public int getIdProduct() {
         return idProduct;
