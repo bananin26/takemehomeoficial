@@ -11,7 +11,7 @@ public class ProductDTO {
     private String descriptionProduct;
     private String priceProduct;
 
-    private String urlProduct;
+
     private String dimensionsProduct;
 
     private User user;
@@ -46,14 +46,6 @@ public class ProductDTO {
 
     public void setPriceProduct(String priceProduct) {
         this.priceProduct = priceProduct;
-    }
-
-    public String getUrlProduct() {
-        return urlProduct;
-    }
-
-    public void setUrlProduct(String urlProduct) {
-        this.urlProduct = urlProduct;
     }
 
     public String getDimensionsProduct() {
