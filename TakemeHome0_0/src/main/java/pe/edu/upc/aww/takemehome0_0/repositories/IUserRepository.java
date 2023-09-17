@@ -13,4 +13,13 @@ public interface IUserRepository extends JpaRepository<User,Integer> {
     @Query("SELECT COUNT(t) FROM User t")
     Long countUsers();
 
+    @Query(value="select u.name, count(m.id_message)\n" +
+            "\n" +
+            "  from users u inner join message m \n" +
+            "\n" +
+            "  on u.id_user=m.user_send_id\n" +
+            "\n" +
+            "  group by u.name", nativeQuery = true)
+    public List<String[]> quantityMessageByPerson();
+
 }

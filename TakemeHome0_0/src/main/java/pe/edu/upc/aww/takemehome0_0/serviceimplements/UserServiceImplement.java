@@ -43,4 +43,9 @@ public class UserServiceImplement implements IUserService {
     public Long counterUsers() {
         return uR.countUsers();
     }
+
+    @Override
+    public List<String[]> quantityMessageByPerson(){
+        return uR.quantityMessageByPerson();
+    }
 }

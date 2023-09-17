@@ -3,11 +3,13 @@ package pe.edu.upc.aww.takemehome0_0.controllers;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
+import pe.edu.upc.aww.takemehome0_0.dtos.MessageByPersonDTO;
 import pe.edu.upc.aww.takemehome0_0.dtos.UserDTO;
 import pe.edu.upc.aww.takemehome0_0.entities.User;
 import pe.edu.upc.aww.takemehome0_0.serviceinterfaces.IUserService;
 
 import java.time.LocalDate;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -61,6 +63,19 @@ public class UserController {
     @GetMapping("/counter")
     public Long counter() {
         return uS.counterUsers();
+    }
+
+    @GetMapping("/cantidadmensajesporpersona")
+    public List<MessageByPersonDTO> cantidadMensajesPorPersona() {
+        List<String[]> lista=uS.quantityMessageByPerson();
+        List<MessageByPersonDTO> listaDTO= new ArrayList<>();
+        for(String[] data:lista){
+            MessageByPersonDTO dto= new MessageByPersonDTO();
+            dto.setName(data[0]);
+            dto.setQuantityMessage(Integer.parseInt(data[1]));
+            listaDTO.add(dto);
+        }
+        return listaDTO;
     }
 
 
