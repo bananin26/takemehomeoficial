@@ -38,4 +38,8 @@ public class OrderServiceImplement implements IOrderService {
         return oR.findByDestinationAddress(destinationAddress);
     }
 
+    public List<String[]> totalPurchasesByPerson(){
+        return oR.totalPurchasesByPerson();
+    }
+
 }

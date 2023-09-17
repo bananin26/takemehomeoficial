@@ -3,7 +3,7 @@ package pe.edu.upc.aww.takemehome0_0.controllers;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
-import pe.edu.upc.aww.takemehome0_0.dtos.MessageByPersonDTO;
+import pe.edu.upc.aww.takemehome0_0.dtos.MessageByUserDTO;
 import pe.edu.upc.aww.takemehome0_0.dtos.UserDTO;
 import pe.edu.upc.aww.takemehome0_0.entities.User;
 import pe.edu.upc.aww.takemehome0_0.serviceinterfaces.IUserService;
@@ -66,11 +66,11 @@ public class UserController {
     }
 
     @GetMapping("/cantidadmensajesenviadosporpersona")
-    public List<MessageByPersonDTO> cantidadMensajesEnviadosPorPersona() {
+    public List<MessageByUserDTO> cantidadMensajesEnviadosPorPersona() {
         List<String[]> lista=uS.quantityMessageSendByPerson();
-        List<MessageByPersonDTO> listaDTO= new ArrayList<>();
+        List<MessageByUserDTO> listaDTO= new ArrayList<>();
         for(String[] data:lista){
-            MessageByPersonDTO dto= new MessageByPersonDTO();
+            MessageByUserDTO dto= new MessageByUserDTO();
             dto.setName(data[0]);
             dto.setQuantityMessage(Integer.parseInt(data[1]));
             listaDTO.add(dto);
@@ -79,11 +79,11 @@ public class UserController {
     }
 
     @GetMapping("/cantidadmensajesrecibidosporpersona")
-    public List<MessageByPersonDTO> cantidadMensajesRecibidosPorPersona() {
+    public List<MessageByUserDTO> cantidadMensajesRecibidosPorPersona() {
         List<String[]> lista=uS.quantityMessageReceiveByPerson();
-        List<MessageByPersonDTO> listaDTO= new ArrayList<>();
+        List<MessageByUserDTO> listaDTO= new ArrayList<>();
         for(String[] data:lista){
-            MessageByPersonDTO dto= new MessageByPersonDTO();
+            MessageByUserDTO dto= new MessageByUserDTO();
             dto.setName(data[0]);
             dto.setQuantityMessage(Integer.parseInt(data[1]));
             listaDTO.add(dto);

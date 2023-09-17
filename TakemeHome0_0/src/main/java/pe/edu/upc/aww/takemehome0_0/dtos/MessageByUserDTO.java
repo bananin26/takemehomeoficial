@@ -1,6 +1,6 @@
 package pe.edu.upc.aww.takemehome0_0.dtos;
 
-public class MessageByPersonDTO {
+public class MessageByUserDTO {
 
     private String name;
     private int quantityMessage;
