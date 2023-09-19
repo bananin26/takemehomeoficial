@@ -26,4 +26,6 @@ public class RecordServiceImplement implements IRecordService {
     public List<String[]> countPointsProduct() {
         return null;
     }
+
+
 }
