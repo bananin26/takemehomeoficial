@@ -15,12 +15,8 @@ public class Record {
     private LocalDate paymentDate;
     @Column(name = "arrive_date",nullable = false)
     private LocalDate arriveDate;
-    @ManyToOne
-    @JoinColumn(name = "user_id")
-    private User user;
-    @ManyToOne
-    @JoinColumn(name = "order_id")
-    private Order order;
+    @Column(name="points",nullable = false)
+    private String points;
     @ManyToOne
     @JoinColumn(name = "product_id")
     private Product product;
@@ -29,6 +25,16 @@ public class Record {
     private Category category;
 
     public Record(){
+    }
+
+    public Record(int idRecord, String payment, LocalDate paymentDate, LocalDate arriveDate, String points,Product product, Category category) {
+        this.idRecord = idRecord;
+        this.payment = payment;
+        this.paymentDate = paymentDate;
+        this.arriveDate = arriveDate;
+        this.points = points;
+        this.product = product;
+        this.category = category;
     }
 
     public int getIdRecord() {
@@ -63,20 +69,12 @@ public class Record {
         this.arriveDate = arriveDate;
     }
 
-    public User getUser() {
-        return user;
+    public String getPoints() {
+        return points;
     }
 
-    public void setUser(User user) {
-        this.user = user;
-    }
-
-    public Order getOrder() {
-        return order;
-    }
-
-    public void setOrder(Order order) {
-        this.order = order;
+    public void setPoints(String points) {
+        this.points = points;
     }
 
     public Product getProduct() {

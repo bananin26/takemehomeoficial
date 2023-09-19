@@ -3,10 +3,12 @@ package pe.edu.upc.aww.takemehome0_0.controllers;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
+import pe.edu.upc.aww.takemehome0_0.dtos.PointsDTO;
 import pe.edu.upc.aww.takemehome0_0.dtos.RecordDTO;
 import pe.edu.upc.aww.takemehome0_0.entities.Record;
 import pe.edu.upc.aww.takemehome0_0.serviceinterfaces.IRecordService;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -27,5 +29,18 @@ public class RecordController {
             ModelMapper m = new ModelMapper();
             return m.map(x, RecordDTO.class);
         }).collect(Collectors.toList());
+    }
+
+    @GetMapping("/CountPoints")
+    public List<PointsDTO> countPoints(){
+        List<String[]>list=rS.countPointsProduct();
+        List<PointsDTO> listDTO=new ArrayList<>();
+        for (String[] data:list){
+            PointsDTO dto = new PointsDTO();
+            dto.setName(data[0]);
+            dto.setPoints(Integer.parseInt(data[1]));
+            listDTO.add(dto);
+        }
+        return listDTO;
     }
 }

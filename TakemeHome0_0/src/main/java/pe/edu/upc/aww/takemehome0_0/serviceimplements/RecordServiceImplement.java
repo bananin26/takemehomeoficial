@@ -21,4 +21,11 @@ public class RecordServiceImplement implements IRecordService {
     public List<Record> list() {
         return iR.findAll();
     }
+
+    @Override
+    public List<String[]> countPointsProduct() {
+        return null;
+    }
+
+
 }
