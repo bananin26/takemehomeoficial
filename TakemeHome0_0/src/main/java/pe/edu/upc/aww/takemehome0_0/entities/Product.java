@@ -21,10 +21,13 @@ public class Product {
     @ManyToOne
     @JoinColumn(name = "id_user")
     private User user;
+    @ManyToOne
+    @JoinColumn(name = "id_order")
+    private Order order;
 
     public Product(){}
 
-   public Product(int idProduct,String nameProduct,String descriptionProduct,Double priceProduct,String dimensionsProduct, User user){
+   public Product(int idProduct,String nameProduct,String descriptionProduct,Double priceProduct,String dimensionsProduct, User user, Order order){
         this.idProduct=idProduct;
         this.nameProduct=nameProduct;
         this.descriptionProduct=descriptionProduct;
@@ -32,6 +35,8 @@ public class Product {
 
         this.dimensionsProduct=dimensionsProduct;
         this.user=user;
+        this. order=order;
+
    }
 
     public int getIdProduct() {
@@ -82,5 +87,13 @@ public class Product {
 
     public void setUser(User user) {
         this.user = user;
+    }
+
+    public Order getOrder() {
+        return order;
+    }
+
+    public void setOrder(Order order) {
+        this.order = order;
     }
 }

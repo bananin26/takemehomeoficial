@@ -42,5 +42,10 @@ public class ProductServiceImplement implements IProductService {
         return pR.countProductsWithUsers();
     }
 
+    @Override
+    public List<String[]> showDescriptionPerOrder() {
+        return null;
+    }
+
 
 }
