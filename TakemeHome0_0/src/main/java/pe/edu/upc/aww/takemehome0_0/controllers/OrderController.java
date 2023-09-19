@@ -4,6 +4,7 @@ package pe.edu.upc.aww.takemehome0_0.controllers;
 import org.aspectj.weaver.ast.Or;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
 import pe.edu.upc.aww.takemehome0_0.dtos.OrderDTO;
 import pe.edu.upc.aww.takemehome0_0.dtos.UserDTO;
@@ -20,6 +21,7 @@ public class OrderController {
     @Autowired
     private IOrderService oR;
 
+    @PreAuthorize("hasAuthority('PRODUCT OWNER')")
     @PostMapping
     public void register(@RequestBody OrderDTO dto){
         ModelMapper m = new ModelMapper();

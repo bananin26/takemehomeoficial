@@ -17,7 +17,7 @@ public class UserController {
     @Autowired
     private IUserService uS;
 
-    @PostMapping
+    @PostMapping("/register")
     public void register(@RequestBody UserDTO dto){
         ModelMapper m = new ModelMapper();
         User u= m.map(dto, User.class);
