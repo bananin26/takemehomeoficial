@@ -4,6 +4,7 @@ import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 import pe.edu.upc.aww.takemehome0_0.dtos.ProductDTO;
+import pe.edu.upc.aww.takemehome0_0.dtos.showDescriptionDTO;
 import pe.edu.upc.aww.takemehome0_0.entities.Product;
 import pe.edu.upc.aww.takemehome0_0.dtos.TotalProductForUserDTO;
 import pe.edu.upc.aww.takemehome0_0.serviceinterfaces.IProductService;
@@ -65,5 +66,18 @@ public class ProductController {
         }
         return listDTO;
     }
+    @GetMapping("/Description")
+    public List<showDescriptionDTO> showDescription(){
+        List<String[]>list=pS.counterProductsForUsers();
+        List<showDescriptionDTO> listDTO=new ArrayList<>();
+        for (String[] data:list){
+            showDescriptionDTO dto = new showDescriptionDTO();
+            dto.setDescriptionProduct(data[0]);
+            dto.setTotalProducts(Integer.parseInt(data[1]));
+            listDTO.add(dto);
+        }
+        return listDTO;
+    }
+
 
 }

@@ -11,4 +11,5 @@ public interface IProductService {
     public Product listId(int idOrder);
     List<Product>findByNameProduct(String nameProduct);
     public List<String[]> counterProductsForUsers();
+    public List<String []>showDescriptionPerOrder();
 }

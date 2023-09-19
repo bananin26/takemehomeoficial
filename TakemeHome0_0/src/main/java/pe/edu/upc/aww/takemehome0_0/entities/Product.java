@@ -20,6 +20,9 @@ public class Product {
     @ManyToOne
     @JoinColumn(name = "id_user")
     private User user;
+    @ManyToOne
+    @JoinColumn(name = "id_order")
+    private Order order;
 
     public Product(){}
 
@@ -31,6 +34,7 @@ public class Product {
 
         this.dimensionsProduct=dimensionsProduct;
         this.user=user;
+        this.order=order;
     }
 
     public int getIdProduct() {
@@ -82,4 +86,6 @@ public class Product {
     public void setUser(User user) {
         this.user = user;
     }
+    public Order getOrder(){return order;}
+    public void setOrder(Order order){this.order=order;}
 }
