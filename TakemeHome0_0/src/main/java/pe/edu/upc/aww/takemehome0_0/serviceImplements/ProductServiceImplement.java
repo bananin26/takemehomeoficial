@@ -2,6 +2,7 @@ package pe.edu.upc.aww.takemehome0_0.serviceImplements;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import pe.edu.upc.aww.takemehome0_0.entities.Order;
 import pe.edu.upc.aww.takemehome0_0.entities.Product;
 import pe.edu.upc.aww.takemehome0_0.repositories.IProductRepository;
 import pe.edu.upc.aww.takemehome0_0.serviceInterfaces.IProductService;
@@ -28,8 +29,8 @@ public class ProductServiceImplement implements IProductService {
     }
 
     @Override
-    public Product listId(int idOrder) {
-        return null;
+    public Product listId(int idProduct) {
+        return pR.findById(idProduct).orElse(new Product());
     }
 
     @Override
@@ -44,7 +45,7 @@ public class ProductServiceImplement implements IProductService {
 
     @Override
     public List<String[]> showDescriptionPerOrder() {
-        return null;
+        return pR.showDescriptionPerOrder();
     }
 
     @Override

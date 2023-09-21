@@ -21,7 +21,6 @@ public class Product {
     @ManyToOne
     @JoinColumn(name = "id_order")
     private Order order;
-
     @ManyToOne
     @JoinColumn(name = "id_category")
     private Category category;

@@ -16,7 +16,7 @@ public class Record {
     @Column(name = "arrive_date",nullable = false)
     private LocalDate arriveDate;
     @Column(name="points",nullable = false)
-    private String points;
+    private int points;
     @ManyToOne
     @JoinColumn(name = "product_id")
     private Product product;
@@ -27,7 +27,7 @@ public class Record {
     public Record(){
     }
 
-    public Record(int idRecord, String payment, LocalDate paymentDate, LocalDate arriveDate, String points,Product product, Category category) {
+    public Record(int idRecord, String payment, LocalDate paymentDate, LocalDate arriveDate, int points,Product product, Category category) {
         this.idRecord = idRecord;
         this.payment = payment;
         this.paymentDate = paymentDate;
@@ -69,11 +69,11 @@ public class Record {
         this.arriveDate = arriveDate;
     }
 
-    public String getPoints() {
+    public int getPoints() {
         return points;
     }
 
-    public void setPoints(String points) {
+    public void setPoints(int points) {
         this.points = points;
     }
 

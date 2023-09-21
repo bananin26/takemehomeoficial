@@ -48,7 +48,7 @@ import java.util.stream.Collectors;
         }
 
         @PostMapping("/search :)")
-        public List<ProductDTO> search(@RequestParam("address") String destinationAddress){
+        public List<ProductDTO> search(@RequestParam("nameProduct") String destinationAddress){
             return pS.findByNameProduct(destinationAddress).stream().map(x->{
                 ModelMapper m= new ModelMapper();
                 return m.map(x,ProductDTO.class);
@@ -73,7 +73,7 @@ import java.util.stream.Collectors;
             List<showDescriptionDTO> listDTO=new ArrayList<>();
             for (String[] data:list){
                 showDescriptionDTO dto = new showDescriptionDTO();
-                dto.setDescriptionProduct(data[0]);
+                dto.setNameUser(data[0]);
                 dto.setTotalProducts(Integer.parseInt(data[1]));
                 listDTO.add(dto);
             }

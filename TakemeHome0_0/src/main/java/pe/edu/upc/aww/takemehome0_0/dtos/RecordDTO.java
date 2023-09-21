@@ -15,7 +15,7 @@ public class RecordDTO {
     private String payment;
     private LocalDate paymentDate;
     private LocalDate arriveDate;
-    private String points;
+    private int points;
     private Product product;
 
     public int getIdRecord() {
@@ -50,11 +50,11 @@ public class RecordDTO {
         this.arriveDate = arriveDate;
     }
 
-    public String getPoints() {
+    public int getPoints() {
         return points;
     }
 
-    public void setPoints(String points) {
+    public void setPoints(int points) {
         this.points = points;
     }
 
