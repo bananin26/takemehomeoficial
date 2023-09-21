@@ -47,5 +47,6 @@ public class ProductServiceImplement implements IProductService {
         return null;
     }
 
+    public List<String []>listPricesGreaterThan1000(){return pR.listPricesGreaterThan1000();}
 
 }

@@ -3,6 +3,7 @@ package pe.edu.upc.aww.takemehome0_0.controllers;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
+import pe.edu.upc.aww.takemehome0_0.dtos.ListPricesGreaterThan1000DTO;
 import pe.edu.upc.aww.takemehome0_0.dtos.ProductDTO;
 import pe.edu.upc.aww.takemehome0_0.dtos.TotalProductForUserDTO;
 import pe.edu.upc.aww.takemehome0_0.dtos.showDescriptionDTO;
@@ -74,6 +75,19 @@ import java.util.stream.Collectors;
                 showDescriptionDTO dto = new showDescriptionDTO();
                 dto.setDescriptionProduct(data[0]);
                 dto.setTotalProducts(Integer.parseInt(data[1]));
+                listDTO.add(dto);
+            }
+            return listDTO;
+        }
+
+        @GetMapping("/ListPricesGreaterThan1000")
+        public List<ListPricesGreaterThan1000DTO> listPricesGreaterThan1000(){
+            List<String[]>list=pS.listPricesGreaterThan1000();
+            List<ListPricesGreaterThan1000DTO> listDTO=new ArrayList<>();
+            for (String[] data:list){
+                ListPricesGreaterThan1000DTO dto = new ListPricesGreaterThan1000DTO();
+                dto.setNameProduct(data[0]);
+                dto.setPriceProduct(Integer.parseInt(data[1]));
                 listDTO.add(dto);
             }
             return listDTO;
