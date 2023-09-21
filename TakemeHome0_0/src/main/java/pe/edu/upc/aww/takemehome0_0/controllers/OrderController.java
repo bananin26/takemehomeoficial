@@ -10,7 +10,7 @@ import pe.edu.upc.aww.takemehome0_0.dtos.OrderDTO;
 import pe.edu.upc.aww.takemehome0_0.dtos.TotalPurchasesByUserDTO;
 import pe.edu.upc.aww.takemehome0_0.dtos.UserDTO;
 import pe.edu.upc.aww.takemehome0_0.entities.Order;
-import pe.edu.upc.aww.takemehome0_0.serviceinterfaces.IOrderService;
+import pe.edu.upc.aww.takemehome0_0.serviceInterfaces.IOrderService;
 
 import java.time.LocalDate;
 import java.util.ArrayList;

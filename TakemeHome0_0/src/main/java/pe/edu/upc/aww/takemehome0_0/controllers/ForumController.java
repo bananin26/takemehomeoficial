@@ -5,7 +5,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 import pe.edu.upc.aww.takemehome0_0.dtos.ForumDTO;
 import pe.edu.upc.aww.takemehome0_0.entities.Forum;
-import pe.edu.upc.aww.takemehome0_0.serviceinterfaces.IForumService;
+import pe.edu.upc.aww.takemehome0_0.serviceInterfaces.IForumService;
 
 import java.time.LocalDate;
 import java.util.List;

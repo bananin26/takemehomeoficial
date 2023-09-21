@@ -5,7 +5,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 import pe.edu.upc.aww.takemehome0_0.dtos.NotificationDTO;
 import pe.edu.upc.aww.takemehome0_0.entities.Notification;
-import pe.edu.upc.aww.takemehome0_0.serviceinterfaces.INotificationService;
+import pe.edu.upc.aww.takemehome0_0.serviceInterfaces.INotificationService;
 
 import java.util.List;
 import java.util.stream.Collectors;
