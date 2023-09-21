@@ -47,5 +47,8 @@ public class ProductServiceImplement implements IProductService {
         return null;
     }
 
+    @Override
+    public List<String []>listPricesGreaterThan1000(){return pR.listPricesGreaterThan1000();}
+
 
 }
