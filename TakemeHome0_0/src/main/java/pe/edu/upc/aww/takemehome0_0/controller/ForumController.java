@@ -1,6 +1,6 @@
 package pe.edu.upc.aww.takemehome0_0.controller;
 
-import springframework.beans.factory.annotation.Autowired;
+import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 import pe.edu.upc.aww.takemehome0_0.dtos.ForumDTO;
