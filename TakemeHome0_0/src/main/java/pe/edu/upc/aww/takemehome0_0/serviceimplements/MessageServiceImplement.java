@@ -12,7 +12,6 @@ public class MessageServiceImplement implements IMessageService {
     @Autowired
     private IMessageRepository mR;
 
-
     @Override
     public void insert(Message message) {
         mR.save(message);
