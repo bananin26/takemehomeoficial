@@ -6,7 +6,7 @@ import org.springframework.web.bind.annotation.*;
 import pe.edu.upc.aww.takemehome0_0.dtos.PointsDTO;
 import pe.edu.upc.aww.takemehome0_0.dtos.RecordDTO;
 import pe.edu.upc.aww.takemehome0_0.entities.Record;
-import pe.edu.upc.aww.takemehome0_0.serviceinterfaces.IRecordService;
+import pe.edu.upc.aww.takemehome0_0.serviceInterfaces.IRecordService;
 
 import java.util.ArrayList;
 import java.util.List;

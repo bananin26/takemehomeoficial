@@ -5,7 +5,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 import pe.edu.upc.aww.takemehome0_0.dtos.CategoryDTO;
 import pe.edu.upc.aww.takemehome0_0.entities.Category;
-import pe.edu.upc.aww.takemehome0_0.serviceinterfaces.ICategoryService;
+import pe.edu.upc.aww.takemehome0_0.serviceInterfaces.ICategoryService;
 
 import java.time.LocalDate;
 import java.util.List;

@@ -7,7 +7,7 @@ import pe.edu.upc.aww.takemehome0_0.dtos.RoleDTO;
 import pe.edu.upc.aww.takemehome0_0.dtos.UserDTO;
 import pe.edu.upc.aww.takemehome0_0.entities.Role;
 import pe.edu.upc.aww.takemehome0_0.entities.User;
-import pe.edu.upc.aww.takemehome0_0.serviceinterfaces.IRolesService;
+import pe.edu.upc.aww.takemehome0_0.serviceInterfaces.IRolesService;
 
 import java.util.List;
 import java.util.stream.Collectors;
