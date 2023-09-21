@@ -17,7 +17,6 @@ public class RecordDTO {
     private LocalDate arriveDate;
     private String points;
     private Product product;
-    private Category category;
 
     public int getIdRecord() {
         return idRecord;
@@ -67,11 +66,4 @@ public class RecordDTO {
         this.product = product;
     }
 
-    public Category getCategory() {
-        return category;
-    }
-
-    public void setCategory(Category category) {
-        this.category = category;
-    }
 }

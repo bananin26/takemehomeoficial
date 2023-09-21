@@ -25,16 +25,21 @@ public class Product {
     @JoinColumn(name = "id_order")
     private Order order;
 
+    @ManyToOne
+    @JoinColumn(name = "id_category")
+    private Category category;
+
     public Product(){}
 
-   public Product(int idProduct,String nameProduct,String descriptionProduct,int priceProduct,String dimensionsProduct, User user, Order order){
+   public Product(int idProduct,String nameProduct,String descriptionProduct,int priceProduct,String dimensionsProduct, User user, Order order,Category category){
         this.idProduct=idProduct;
         this.nameProduct=nameProduct;
         this.descriptionProduct=descriptionProduct;
         this.priceProduct=priceProduct;
         this.dimensionsProduct=dimensionsProduct;
         this.user=user;
-        this. order=order;
+        this.order=order;
+        this.category=category;
 
    }
 
@@ -93,4 +98,14 @@ public class Product {
     public void setOrder(Order order) {
         this.order = order;
     }
+
+    public Category getCategory() {
+        return category;
+    }
+
+    public void setCategory(Category category) {
+        this.category = category;
+    }
+
+
 }
