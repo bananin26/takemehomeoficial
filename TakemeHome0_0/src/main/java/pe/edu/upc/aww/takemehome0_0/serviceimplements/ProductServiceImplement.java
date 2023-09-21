@@ -1,4 +1,4 @@
-package pe.edu.upc.aww.takemehome0_0.serviceimplements;
+package pe.edu.upc.aww.takemehome0_0.serviceImplements;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -47,6 +47,5 @@ public class ProductServiceImplement implements IProductService {
         return null;
     }
 
-    public List<String []>listPricesGreaterThan1000(){return pR.listPricesGreaterThan1000();}
 
 }

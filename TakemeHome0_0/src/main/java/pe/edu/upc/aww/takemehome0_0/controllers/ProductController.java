@@ -80,17 +80,5 @@ import java.util.stream.Collectors;
             return listDTO;
         }
 
-        @GetMapping("/ListPricesGreaterThan1000")
-        public List<ListPricesGreaterThan1000DTO> listPricesGreaterThan1000(){
-            List<String[]>list=pS.listPricesGreaterThan1000();
-            List<ListPricesGreaterThan1000DTO> listDTO=new ArrayList<>();
-            for (String[] data:list){
-                ListPricesGreaterThan1000DTO dto = new ListPricesGreaterThan1000DTO();
-                dto.setNameProduct(data[0]);
-                dto.setPriceProduct(Integer.parseInt(data[1]));
-                listDTO.add(dto);
-            }
-            return listDTO;
-        }
 
     }
