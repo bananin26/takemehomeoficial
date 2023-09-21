@@ -87,7 +87,7 @@ import java.util.stream.Collectors;
             for (String[] data:list){
                 ListPricesGreaterThan1000DTO dto = new ListPricesGreaterThan1000DTO();
                 dto.setNameProduct(data[0]);
-                dto.setPriceProduct(Double.parseDouble(data[1]));
+                dto.setPriceProduct(Integer.parseInt(data[1]));
                 listDTO.add(dto);
             }
             return listDTO;

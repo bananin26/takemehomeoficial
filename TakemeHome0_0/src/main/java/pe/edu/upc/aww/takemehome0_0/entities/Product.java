@@ -15,7 +15,7 @@ public class Product {
     @Column(name = "descriptionProduct",length = 250 ,nullable = false)
     private String descriptionProduct;
     @Column(name = "priceProduct",nullable = false)
-    private Double priceProduct;
+    private int priceProduct;
     @Column(name = "dimensionsProduct",nullable = false)
     private String dimensionsProduct;
     @ManyToOne
@@ -27,7 +27,7 @@ public class Product {
 
     public Product(){}
 
-   public Product(int idProduct,String nameProduct,String descriptionProduct,Double priceProduct,String dimensionsProduct, User user, Order order){
+   public Product(int idProduct,String nameProduct,String descriptionProduct,int priceProduct,String dimensionsProduct, User user, Order order){
         this.idProduct=idProduct;
         this.nameProduct=nameProduct;
         this.descriptionProduct=descriptionProduct;
@@ -62,15 +62,13 @@ public class Product {
         this.descriptionProduct = descriptionProduct;
     }
 
-    public Double getPriceProduct() {
+    public int getPriceProduct() {
         return priceProduct;
     }
 
-    public void setPriceProduct(Double priceProduct) {
+    public void setPriceProduct(int priceProduct) {
         this.priceProduct = priceProduct;
     }
-
-
 
     public String getDimensionsProduct() {
         return dimensionsProduct;

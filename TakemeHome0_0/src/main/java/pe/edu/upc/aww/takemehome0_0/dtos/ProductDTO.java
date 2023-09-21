@@ -9,12 +9,8 @@ public class ProductDTO {
 
     private String nameProduct;
     private String descriptionProduct;
-    private Double priceProduct;
-
-
+    private int priceProduct;
     private String dimensionsProduct;
-
-    private User user;
 
     public int getIdProduct() {
         return idProduct;
@@ -40,11 +36,11 @@ public class ProductDTO {
         this.descriptionProduct = descriptionProduct;
     }
 
-    public Double getPriceProduct() {
+    public int getPriceProduct() {
         return priceProduct;
     }
 
-    public void setPriceProduct(Double priceProduct) {
+    public void setPriceProduct(int priceProduct) {
         this.priceProduct = priceProduct;
     }
 
@@ -54,13 +50,5 @@ public class ProductDTO {
 
     public void setDimensionsProduct(String dimensionsProduct) {
         this.dimensionsProduct = dimensionsProduct;
-    }
-
-    public User getUser() {
-        return user;
-    }
-
-    public void setUser(User user) {
-        this.user = user;
     }
 }
