@@ -1,8 +1,7 @@
-package pe.edu.upc.aww.takemehome0_0.serviceinterfaces;
+package pe.edu.upc.aww.takemehome0_0.serviceInterfaces;
 
 import pe.edu.upc.aww.takemehome0_0.entities.Notification;
 
-import java.util.Collection;
 import java.util.List;
 
 public interface INotificationService {

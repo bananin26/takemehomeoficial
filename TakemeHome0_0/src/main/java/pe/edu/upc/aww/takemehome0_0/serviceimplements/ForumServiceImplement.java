@@ -4,7 +4,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import pe.edu.upc.aww.takemehome0_0.entities.Forum;
 import pe.edu.upc.aww.takemehome0_0.repositories.IForumRepository;
-import pe.edu.upc.aww.takemehome0_0.serviceinterfaces.IForumService;
+import pe.edu.upc.aww.takemehome0_0.serviceInterfaces.IForumService;
 
 import java.time.LocalDate;
 import java.util.List;

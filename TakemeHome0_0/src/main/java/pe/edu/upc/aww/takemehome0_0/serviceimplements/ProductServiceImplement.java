@@ -4,7 +4,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import pe.edu.upc.aww.takemehome0_0.entities.Product;
 import pe.edu.upc.aww.takemehome0_0.repositories.IProductRepository;
-import pe.edu.upc.aww.takemehome0_0.serviceinterfaces.IProductService;
+import pe.edu.upc.aww.takemehome0_0.serviceInterfaces.IProductService;
 
 import java.util.List;
 

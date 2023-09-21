@@ -4,7 +4,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import pe.edu.upc.aww.takemehome0_0.entities.Order;
 import pe.edu.upc.aww.takemehome0_0.repositories.IOrderRepository;
-import pe.edu.upc.aww.takemehome0_0.serviceinterfaces.IOrderService;
+import pe.edu.upc.aww.takemehome0_0.serviceInterfaces.IOrderService;
 
 import java.util.List;
 

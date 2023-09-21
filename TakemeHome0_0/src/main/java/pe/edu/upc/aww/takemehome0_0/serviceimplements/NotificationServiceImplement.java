@@ -4,7 +4,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import pe.edu.upc.aww.takemehome0_0.entities.Notification;
 import pe.edu.upc.aww.takemehome0_0.repositories.INotificationRepository;
-import pe.edu.upc.aww.takemehome0_0.serviceinterfaces.INotificationService;
+import pe.edu.upc.aww.takemehome0_0.serviceInterfaces.INotificationService;
 
 import java.util.List;
 

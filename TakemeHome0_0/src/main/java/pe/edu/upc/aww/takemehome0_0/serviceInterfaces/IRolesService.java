@@ -1,8 +1,6 @@
-package pe.edu.upc.aww.takemehome0_0.serviceinterfaces;
+package pe.edu.upc.aww.takemehome0_0.serviceInterfaces;
 
-import pe.edu.upc.aww.takemehome0_0.entities.Record;
 import pe.edu.upc.aww.takemehome0_0.entities.Role;
-import pe.edu.upc.aww.takemehome0_0.entities.User;
 
 import java.util.List;
 

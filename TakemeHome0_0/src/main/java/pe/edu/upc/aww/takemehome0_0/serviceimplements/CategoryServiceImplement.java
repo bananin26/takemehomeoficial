@@ -4,7 +4,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import pe.edu.upc.aww.takemehome0_0.entities.Category;
 import pe.edu.upc.aww.takemehome0_0.repositories.ICategoryRepository;
-import pe.edu.upc.aww.takemehome0_0.serviceinterfaces.ICategoryService;
+import pe.edu.upc.aww.takemehome0_0.serviceInterfaces.ICategoryService;
 import java.util.List;
 
 @Service

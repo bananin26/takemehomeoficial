@@ -8,7 +8,7 @@ import pe.edu.upc.aww.takemehome0_0.dtos.ProductDTO;
 import pe.edu.upc.aww.takemehome0_0.dtos.TotalProductForUserDTO;
 import pe.edu.upc.aww.takemehome0_0.dtos.showDescriptionDTO;
 import pe.edu.upc.aww.takemehome0_0.entities.Product;
-import pe.edu.upc.aww.takemehome0_0.serviceinterfaces.IProductService;
+import pe.edu.upc.aww.takemehome0_0.serviceInterfaces.IProductService;
 
 import java.util.ArrayList;
 import java.util.List;
