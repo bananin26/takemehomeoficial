@@ -19,4 +19,11 @@ public interface IProductRepository extends JpaRepository<Product,Integer> {
             "ON o.idOrder = p.idProduct\n" +
             "ORDER BY p.idProduct")
     public List<String []>showDescriptionPerOrder();
+
+    @Query(value="SELECT p.name_product, p.price_product\n" +
+            "FROM products p\n" +
+            "Where p.price_product > 1000", nativeQuery = true)
+    public List<String []>listPricesGreaterThan1000();
+
+
 }
