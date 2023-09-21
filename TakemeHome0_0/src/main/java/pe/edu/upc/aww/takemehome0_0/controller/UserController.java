@@ -65,6 +65,7 @@ public class UserController {
         return uS.counterUsers();
     }
 
+    //Mi parte
     @GetMapping("/QuantityMessageSendByUser")
     public List<MessageByUserDTO> cantidadMensajesEnviadosPorPersona() {
         List<String[]> lista=uS.quantityMessageSendByPerson();
