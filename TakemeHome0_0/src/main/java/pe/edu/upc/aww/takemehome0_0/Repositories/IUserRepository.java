@@ -1,0 +1,10 @@
+package pe.edu.upc.aww.takemehome0_0.Repositories;
+
+public class IUserRepository {
+
+
+
+
+
+
+}
