@@ -19,9 +19,6 @@ public class Product {
     @Column(name = "dimensionsProduct",nullable = false)
     private String dimensionsProduct;
     @ManyToOne
-    @JoinColumn(name = "id_user")
-    private User user;
-    @ManyToOne
     @JoinColumn(name = "id_order")
     private Order order;
 
@@ -37,7 +34,6 @@ public class Product {
         this.descriptionProduct=descriptionProduct;
         this.priceProduct=priceProduct;
         this.dimensionsProduct=dimensionsProduct;
-        this.user=user;
         this.order=order;
         this.category=category;
 
@@ -81,14 +77,6 @@ public class Product {
 
     public void setDimensionsProduct(String dimensionsProduct) {
         this.dimensionsProduct = dimensionsProduct;
-    }
-
-    public User getUser() {
-        return user;
-    }
-
-    public void setUser(User user) {
-        this.user = user;
     }
 
     public Order getOrder() {

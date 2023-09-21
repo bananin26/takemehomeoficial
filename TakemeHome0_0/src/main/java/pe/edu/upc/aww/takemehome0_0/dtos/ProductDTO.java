@@ -4,15 +4,12 @@ import pe.edu.upc.aww.takemehome0_0.entities.Category;
 import pe.edu.upc.aww.takemehome0_0.entities.Order;
 import pe.edu.upc.aww.takemehome0_0.entities.User;
 
-
-
 public class ProductDTO {
     private int idProduct;
     private String nameProduct;
     private String descriptionProduct;
     private int priceProduct;
     private String dimensionsProduct;
-    private User user;
     private Order order;
     private Category category;
 
@@ -54,14 +51,6 @@ public class ProductDTO {
 
     public void setDimensionsProduct(String dimensionsProduct) {
         this.dimensionsProduct = dimensionsProduct;
-    }
-
-    public User getUser() {
-        return user;
-    }
-
-    public void setUser(User user) {
-        this.user = user;
     }
 
     public Order getOrder() {
