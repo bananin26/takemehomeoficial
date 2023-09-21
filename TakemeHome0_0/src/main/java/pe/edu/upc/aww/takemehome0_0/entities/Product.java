@@ -32,7 +32,6 @@ public class Product {
         this.nameProduct=nameProduct;
         this.descriptionProduct=descriptionProduct;
         this.priceProduct=priceProduct;
-
         this.dimensionsProduct=dimensionsProduct;
         this.user=user;
         this. order=order;
