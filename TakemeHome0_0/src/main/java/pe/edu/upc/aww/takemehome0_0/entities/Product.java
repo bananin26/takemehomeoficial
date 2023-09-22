@@ -1,6 +1,7 @@
 package pe.edu.upc.aww.takemehome0_0.entities;
 
 import javax.persistence.*;
+import java.time.LocalDate;
 
 @Entity
 @Table(name="products")
@@ -14,27 +15,27 @@ public class Product {
     @Column(name = "descriptionProduct",length = 250 ,nullable = false)
     private String descriptionProduct;
     @Column(name = "priceProduct",nullable = false)
-    private Double priceProduct;
+    private int priceProduct;
     @Column(name = "dimensionsProduct",nullable = false)
     private String dimensionsProduct;
     @ManyToOne
-    @JoinColumn(name = "id_user")
-    private User user;
-    @ManyToOne
     @JoinColumn(name = "id_order")
     private Order order;
+    @ManyToOne
+    @JoinColumn(name = "id_category")
+    private Category category;
 
     public Product(){}
 
-    public Product(int idProduct,String nameProduct,String descriptionProduct,Double priceProduct,String dimensionsProduct, User user){
+    public Product(int idProduct,String nameProduct,String descriptionProduct,int priceProduct,String dimensionsProduct, User user, Order order,Category category){
         this.idProduct=idProduct;
         this.nameProduct=nameProduct;
         this.descriptionProduct=descriptionProduct;
         this.priceProduct=priceProduct;
-
         this.dimensionsProduct=dimensionsProduct;
-        this.user=user;
         this.order=order;
+        this.category=category;
+
     }
 
     public int getIdProduct() {
@@ -61,15 +62,13 @@ public class Product {
         this.descriptionProduct = descriptionProduct;
     }
 
-    public Double getPriceProduct() {
+    public int getPriceProduct() {
         return priceProduct;
     }
 
-    public void setPriceProduct(Double priceProduct) {
+    public void setPriceProduct(int priceProduct) {
         this.priceProduct = priceProduct;
     }
-
-
 
     public String getDimensionsProduct() {
         return dimensionsProduct;
@@ -79,13 +78,21 @@ public class Product {
         this.dimensionsProduct = dimensionsProduct;
     }
 
-    public User getUser() {
-        return user;
+    public Order getOrder() {
+        return order;
     }
 
-    public void setUser(User user) {
-        this.user = user;
+    public void setOrder(Order order) {
+        this.order = order;
     }
-    public Order getOrder(){return order;}
-    public void setOrder(Order order){this.order=order;}
+
+    public Category getCategory() {
+        return category;
+    }
+
+    public void setCategory(Category category) {
+        this.category = category;
+    }
+
+
 }
