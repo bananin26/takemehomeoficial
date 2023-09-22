@@ -37,6 +37,7 @@ public class UserController {
     }*/
 
     @DeleteMapping("/{id}")
+    @PreAuthorize("hasAuthority('ADMIN')")
     public void delete(@PathVariable("id") Integer id){
         uS.delete(id);
     }
