@@ -15,10 +15,8 @@ public class RecordDTO {
     private String payment;
     private LocalDate paymentDate;
     private LocalDate arriveDate;
-    private User user;
-    private Order order;
+    private int points;
     private Product product;
-    private Category category;
 
     public int getIdRecord() {
         return idRecord;
@@ -52,20 +50,12 @@ public class RecordDTO {
         this.arriveDate = arriveDate;
     }
 
-    public User getUser() {
-        return user;
+    public int getPoints() {
+        return points;
     }
 
-    public void setUser(User user) {
-        this.user = user;
-    }
-
-    public Order getOrder() {
-        return order;
-    }
-
-    public void setOrder(Order order) {
-        this.order = order;
+    public void setPoints(int points) {
+        this.points = points;
     }
 
     public Product getProduct() {
@@ -76,11 +66,4 @@ public class RecordDTO {
         this.product = product;
     }
 
-    public Category getCategory() {
-        return category;
-    }
-
-    public void setCategory(Category category) {
-        this.category = category;
-    }
 }

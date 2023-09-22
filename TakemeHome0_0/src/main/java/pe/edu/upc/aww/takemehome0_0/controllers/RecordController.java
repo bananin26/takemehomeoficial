@@ -30,6 +30,7 @@ public class RecordController {
             return m.map(x, RecordDTO.class);
         }).collect(Collectors.toList());
     }
+
     @GetMapping("/CountPoints")
     public List<PointsDTO> countPoints(){
         List<String[]>list=rS.countPointsProduct();

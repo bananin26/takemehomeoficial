@@ -1,18 +1,17 @@
 package pe.edu.upc.aww.takemehome0_0.dtos;
 
+import pe.edu.upc.aww.takemehome0_0.entities.Category;
+import pe.edu.upc.aww.takemehome0_0.entities.Order;
 import pe.edu.upc.aww.takemehome0_0.entities.User;
 
 public class ProductDTO {
     private int idProduct;
-
     private String nameProduct;
     private String descriptionProduct;
-    private Double priceProduct;
-
-
+    private int priceProduct;
     private String dimensionsProduct;
-
-    private User user;
+    private Order order;
+    private Category category;
 
     public int getIdProduct() {
         return idProduct;
@@ -38,11 +37,11 @@ public class ProductDTO {
         this.descriptionProduct = descriptionProduct;
     }
 
-    public Double getPriceProduct() {
+    public int getPriceProduct() {
         return priceProduct;
     }
 
-    public void setPriceProduct(Double priceProduct) {
+    public void setPriceProduct(int priceProduct) {
         this.priceProduct = priceProduct;
     }
 
@@ -54,11 +53,19 @@ public class ProductDTO {
         this.dimensionsProduct = dimensionsProduct;
     }
 
-    public User getUser() {
-        return user;
+    public Order getOrder() {
+        return order;
     }
 
-    public void setUser(User user) {
-        this.user = user;
+    public void setOrder(Order order) {
+        this.order = order;
+    }
+
+    public Category getCategory() {
+        return category;
+    }
+
+    public void setCategory(Category category) {
+        this.category = category;
     }
 }
