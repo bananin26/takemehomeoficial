@@ -1,4 +1,4 @@
-package pe.edu.upc.aww.takemehome0_0.serviceinterfaces;
+package pe.edu.upc.aww.takemehome0_0.serviceInterfaces;
 
 import pe.edu.upc.aww.takemehome0_0.entities.User;
 
@@ -12,4 +12,8 @@ public interface IUserService {
     public void delete(int idUser);
     public User listId(int idUser);
     List<User>findByBirthday(LocalDate birthday);
+    Long counterUsers();
+
+    public List<String[]> quantityMessageSendByPerson();
+    public List<String[]> quantityMessageReceiveByPerson();
 }
