@@ -1,11 +1,11 @@
-package pe.edu.upc.aww.takemehome0_0.serviceimplements;
+package pe.edu.upc.aww.takemehome0_0.serviceImplements;
 
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import pe.edu.upc.aww.takemehome0_0.entities.Record;
 import pe.edu.upc.aww.takemehome0_0.repositories.IRecordRepository;
-import pe.edu.upc.aww.takemehome0_0.serviceinterfaces.IRecordService;
+import pe.edu.upc.aww.takemehome0_0.serviceInterfaces.IRecordService;
 import java.util.List;
 
 
@@ -24,6 +24,8 @@ public class RecordServiceImplement implements IRecordService {
 
     @Override
     public List<String[]> countPointsProduct() {
-        return null;
+        return iR.countPointsProduct();
     }
+
+
 }
