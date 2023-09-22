@@ -38,4 +38,18 @@ public class UserServiceImplement implements IUserService {
     public List<User> findByBirthday(LocalDate birthday) {
         return uR.findByBirthday(birthday);
     }
+    @Override
+    public Long counterUsers() {
+        return uR.countUsers();
+    }
+
+    @Override
+    public List<String[]> quantityMessageSendByPerson(){
+        return uR.quantityMessageSendByPerson();
+    }
+
+    @Override
+    public List<String[]> quantityMessageReceiveByPerson(){
+        return uR.quantityMessageReceiveByPerson();
+    }
 }

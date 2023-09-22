@@ -11,7 +11,7 @@ public interface IProductRepository extends JpaRepository<Product,Integer> {
 
     @Query("select u.name, sum(p.idProduct)\n" +
             "from User u inner join Product p\n" +
-            "on u.idUser=p.idProduct \n" +
+            "on u.id=p.idProduct \n" +
             "group by u.name")
     public List<String[]> countProductsWithUsers();
     @Query("SELECT o.idOrder, p.descriptionProduct\n" +
