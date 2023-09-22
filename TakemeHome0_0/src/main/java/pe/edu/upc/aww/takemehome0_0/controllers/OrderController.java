@@ -60,7 +60,7 @@ public class OrderController {
 
     @GetMapping("/SumatoryPurchasesByUser")
     public List<TotalPurchasesByUserDTO> SumatoriaComprasPorUsuario() {
-        List<String[]> lista=oR.totalPurchasesByPerson();
+        List<String[]> lista =oR.totalPurchasesByPerson();
         List<TotalPurchasesByUserDTO> listaDTO= new ArrayList<>();
         for(String[] data:lista){
             TotalPurchasesByUserDTO dto= new TotalPurchasesByUserDTO();

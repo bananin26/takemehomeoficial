@@ -94,7 +94,7 @@ public class UserController {
         return listaDTO;
     }
     @GetMapping
-    @PreAuthorize("hasAuthority('ADMIN')")
+    @PreAuthorize("hasAuthority('OWNER')")
     public List<UserDTO> listar(){
         return uS.list().stream().map(x->{
             ModelMapper m= new ModelMapper();
