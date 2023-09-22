@@ -10,7 +10,7 @@ import java.util.List;
 @Repository
 public interface IRecordRepository extends JpaRepository<Record,Integer> {
 
-    @Query(value="select u.name, count(r.points)\n" +
+    @Query(value="select u.name, SUM(r.points)\n" +
             "from users u inner join orders o on u.id_user=o.id_user\n" +
             "inner join products pr on o.id_order=pr.id_order\n" +
             "inner join records r on pr.id_product=r.product_id\n" +
