@@ -21,7 +21,6 @@ public class UserController {
     private IUserService uS;
 
     @PostMapping
-    @PreAuthorize("hasAuthority('ADMIN')")
     public void register(@RequestBody UserDTO dto){
         ModelMapper m = new ModelMapper();
         User u= m.map(dto, User.class);
@@ -94,7 +93,7 @@ public class UserController {
         return listaDTO;
     }
     @GetMapping
-    @PreAuthorize("hasAuthority('OWNER')")
+    @PreAuthorize("hasAuthority('ADMIN')")
     public List<UserDTO> listar(){
         return uS.list().stream().map(x->{
             ModelMapper m= new ModelMapper();
